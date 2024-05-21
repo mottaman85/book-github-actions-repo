@@ -1,0 +1,9 @@
+name: "workflow with params"
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "nombre del app"
+        required: true
+        default: "hello man"
+  
