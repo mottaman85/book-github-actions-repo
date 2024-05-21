@@ -1,4 +1,12 @@
 name: MyBuilder
+
+  inputs:
+    name: 
+      description: "nombre del app"
+      required: true
+      default: "hello man"
+  
+  
 on:
   push:
     branches: [main]
