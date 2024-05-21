@@ -6,4 +6,7 @@ on:
         description: "nombre del app"
         required: true
         default: "hello man"
-  
+jobs:
+
+  my-job:
+    runs-on: "ubuntu-latest"
