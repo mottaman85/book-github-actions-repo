@@ -18,5 +18,7 @@ jobs:
 
       - run: "echo ${{env.VARIABLE}}"
 
-      - run: "echo ${{ toJson(github) }}"
+      - run: "::add-mask::hello"
+
+      - run: echo "hello"
       
