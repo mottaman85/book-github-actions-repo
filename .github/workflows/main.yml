@@ -18,7 +18,7 @@ jobs:
 
       - run: "echo ${{env.VARIABLE}}"
 
-      - run: "::add-mask::hello"
+      - run: "::add-mask::$env.VARIABLE}"
 
-      - run: echo "hello"
+      - run: "echo ${{env.VARIABLE}}"
       
