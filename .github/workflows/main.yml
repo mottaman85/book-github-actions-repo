@@ -1,4 +1,4 @@
-wname: "workflow with params"
+name: "workflow with params"
 
 on:
   push:
