@@ -1,15 +1,20 @@
 name: "workflow with params"
-on: 
-  workflow_dispatch:
-    inputs:
-      my_param:
-        description: "nombre del app"
-        required: true
-        default: "hello man"
+
+on:
+  push:
+    branches: "main"
+
 jobs:
-
-  my-job:
+  test_variables:
     runs-on: "ubuntu-latest"
-
+    env:
+      VARIABLE: grenn    
+    
     steps:
-      - run: echo "${{ github.events.inputs.my_param }}"
+      - run: |
+          echo "${{env.VARIABLE}}"
+
+          echo "VARIABLE=gree >> $GITHUB_ENV"
+
+      - run: "echo ${{env.VARIABLE}}"
+      
